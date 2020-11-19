@@ -1,0 +1,20 @@
+<h1 class="text-center">Create new restaurant</h1>
+
+
+<div class="text-center">
+  <div class="row">
+    <div class="col-4">
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category %>
+        <%= f.submit class: "btn btn-secondary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<%= button_to "Back Home", restaurants_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-outline-secondary", :method => :get %>

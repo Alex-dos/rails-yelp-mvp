@@ -1,0 +1,16 @@
+<h1 class="text-center">Index restaurants </h1>
+
+<div class="text-center">
+<% @restaurants.each do |restaurant|  %>
+<li><br><br><%= restaurant.name %><%= button_to "Edit", restaurant_path(restaurant), :id => "open-contacts-dialog-btn",
+      :class => "btn btn-outline-secondary", :method => :get %></li>
+<% end %>
+<br>
+<br>
+<br>
+<%= button_to "Create New", new_restaurant_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-outline-secondary", :method => :get %>
+
+</div>
+
+
